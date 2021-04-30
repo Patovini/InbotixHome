@@ -1,0 +1,560 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* ----------------NAVBAR  */
+.navbar {
+    background: linear-gradient(to right,  rgb(61, 144, 201) 0%, 
+    rgb(61, 144, 201) 46%,rgb(22, 153, 204) 49%, rgb(31, 166, 217) 52%,  
+    rgb(40, 178, 231) 54%, rgb(49, 190, 244) 100%);
+    
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 999;
+    top: 0;
+    margin-bottom: 0 !important;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    max-width: 1300px;
+    margin: 0 auto; 
+    /* cima baixo  -  esquerda direita */
+    padding: 0 50px;
+}
+
+.navbar_container img{
+    width: 12%;
+    height: 18%;
+    margin-top: 3%;
+    align-items: center;
+}
+
+
+#inbotix_logo {
+    background-color:none;
+    color: #fff;
+    /* background-image: ; */
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+} 
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_item{
+    height: 80px;
+}
+
+.navbar_itens{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+    font-size: 20px;
+}
+
+/* .navbar_menu:hover {
+    color: #BFFF;
+
+} */
+
+@media screen and (max-width: 960px) {
+    .navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;       
+    }
+
+    .navbar_menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition:  all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbar_menu.active {
+        background: linear-gradient(to right,  rgb(61, 144, 201) 0%, 
+    rgb(61, 144, 201) 46%,rgb(22, 153, 204) 49%, rgb(31, 166, 217) 52%,  
+    rgb(40, 178, 231) 54%, rgb(49, 190, 244) 100%);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    .inbotix_logo{
+        padding-left: 25px;
+    }
+    .navbar_menor .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar_item{
+        width: 100%;
+    }
+
+    .navbar_itens{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_menor .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+}
+
+/* ----------------Primeira parte  Sobre */
+
+.primeira {
+    background: linear-gradient(to right,  rgb(61, 144, 201) 0%, 
+    rgb(61, 144, 201) 46%,rgb(22, 153, 204) 49%, rgb(31, 166, 217) 52%,  
+    rgb(40, 178, 231) 54%, rgb(49, 190, 244) 100%);
+}
+
+.primeira_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;    
+    height: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.primeira_container iframe{
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.pri_cabeca {
+    font-size: 80px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.pri_descricao {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.pri_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    border: black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.pri_btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* .primeira_container button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    border: black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+} */
+
+@media screen and (max-width: 768px) {
+    .pri_cabeca{
+        font-size: 50px;
+    }
+
+    .pri_descricao {
+        font-size: 20px;
+    }
+}
+
+/* ---------------- Segunda parte Soluções */
+
+.segunda {
+    
+    padding: 200px 0;
+}
+
+ .segundo_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+} 
+
+.seg_cabeca{
+    font-size: 80px;
+    margin-bottom: 24px;
+    color: #00BFFF;
+}
+
+.seg_descricao{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+
+.img_container{ 
+    text-align: center;
+}
+.img_container_card{
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:black;
+    background-image: yellow;
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .seg_cabeca{
+        font-size: 50px;
+    }
+
+    .seg_descricao {
+        font-size: 20px;
+    }
+}
+
+/* ---------------- Terceira parte Beneficios*/
+
+
+.ben_container {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+.ben_link {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.ben_links{
+    display: flex;
+}
+
+.ben_itens{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 18px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+.ben_cabeca{
+    color: #00BFFF;
+    font-size: 4rem;
+    padding: 5%;
+}
+
+#benLogo{
+    color: #00BFFF;
+    font-size: 30px;
+    align-content: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#benFrase{
+    color: #00BFFF;
+    font-size: 20px;
+    align-content: center;
+
+}
+
+
+
+/* ---------------- Quarta parte Plano Preço */
+
+.planoPreco {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+    margin-bottom: 0 !important;
+}
+
+.titulo_planos {
+    color: #00BFFF;
+    font-size: 3rem;
+    padding: 10%;
+    margin: 0;
+
+}
+
+.plaPre_tabela {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.plaPre_card {
+    margin: 10px;
+    height: 425px;
+    width: 300px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #00BFFF;
+    border-color: black;
+    
+}
+
+.TipoAssinatura {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.plaPre_card h2 {
+    text-align: center;
+}
+
+.glyphicon{
+    text-align: center;
+    font-size:15px;
+    color: black;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+}
+
+
+.plaPre_card p {
+    color: black;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+}
+
+.plaPre_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    
+}
+
+.plaPre_card button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    border: black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.plaPre_card button:hover {
+    cursor: pointer;
+}
+
+.plaPre_card:hover {
+    transform: scale(1.075);
+    transition: 0.3 ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px ){
+    .plaPre_tabela{
+        padding-top: 2rem;
+        margin-top: 80px;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width: 768px ){
+    .plaPre_tabela{
+        padding-top: 2rem;
+        margin-top: 80px;
+        grid-template: 1fr;
+    }
+}
+
+
+
+/* ---------------- quinta parte Footer*/
+
+.footer_container {
+    background: linear-gradient(to right,  rgb(61, 144, 201) 0%, 
+    rgb(61, 144, 201) 46%,rgb(22, 153, 204) 49%, rgb(31, 166, 217) 52%,  
+    rgb(40, 178, 231) 54%, rgb(49, 190, 244) 100%);
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+.footer_link {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.footer_links{
+    display: flex;
+}
+
+.footer_itens{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 18px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer_itens span{
+    display: flex;
+    color: #fff;
+}
+
+.footer_itens a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.txtfooter {
+    font-size: 20px;
+}
+
+#fonthome {
+    font-size: 18px;
+}
+
+.footer_itens h3{
+    font-size: 18px;
+}
+
+.footer_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    
+}
+
+.footer_itens button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    border: black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+.rodape{
+    display: flex;
+    font-size: 25%;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 820px) {
+    .footer_link {
+        padding-top: 2rem;
+    }
+
+    .footer_links{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer_itens{
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
